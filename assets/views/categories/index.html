@@ -1,0 +1,21 @@
+<table border="1px dotted">
+    <thead>
+        <tr>
+            <th width="200px">Name</th>
+            <th width="700px">Description</th>
+            <th width="200px">Created</th>
+            <th width="200px">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="item in categories">
+            <td>{{item.name}}</td>
+            <td>{{item.description}}</td>
+            <td>{{item.createdAt|date:"dd/MM/yyyy"}}</td>
+            <td>
+                <a href="/categories/edit/{{item.id}}">Edit</a>
+                <a ng-click="remove(item.id)" class="pull-right btn btn-primary btn-xs">Remove</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,23 @@
+<a href="/signup">Add user</a>
+<table border="1px">
+    <thead>
+        <tr>
+            <th>Thumbnail</th>
+            <th width="200px">Name</th>
+            <th width="200px">Username</th>
+            <th width="400px">Email</th>
+            <th width="200px">Created</th>
+            <th width="200px">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="user in users">
+            <td><img ng-src="{{user.gravatarUrl}}" alt=""></td>
+            <td>{{user.name}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.updatedAt|date:"dd/MM/yyyy"}}</td>
+            <td><a href="/users/edit/{{user.id}}">Edit</a>- <a ng-click="remove(user.id)"><span style="color:red">Remove</span></a></td>
+        </tr>
+    </tbody>
+</table>
