@@ -1,3 +1,1 @@
-# blogfull
-
-a [Sails](http://sailsjs.org) application
+Sử dụng sails. Server use nodejs , client use angularJS . Blog có đầy đủ chức năng như thêm người dùng, chỉnh sửa người dùng, post bài và danh mục. Upload sử dụng ở thư mục views đồng cấp với thư mục assets.
